@@ -88,8 +88,7 @@ function home() {
   showHeader();
   let str = `
   <div class="w-100 bg-light p-5 m-5 rounded text-center">
-      <h3>Welcome ${user.name}</h3>
-      <button onclick='showLogin()'>Logout</button>
+      <h3>Welcome ${user.name}</h3> 
       <p><select id="type" class="form-control" onchange='showUser()'>
          <option value=0>--Select--</option>
          <option value=1>Deposit</option>
@@ -100,6 +99,7 @@ function home() {
          <p><input type="number" id="amount" class="form-control" placeholder="Enter Amount"></p>
          <button onclick='saveData()' class="form-control btn btn-success">Submit</button>
          <p><b>Current Balance: <span id='spBalance'>${user.balance}</span></b></p>
+         <button onclick='showLogin()' class="btn btn-outline-secondary">Logout</button>
     </div>
       `;
   root.innerHTML = str;
@@ -166,7 +166,7 @@ function showLogin() {
 function showHome() {
   showHeader();
   let str = `
-<div class="card text-center">
+<div class="card text-center p-5 m-5">
   <div class="card-header">
     Banking...!!
   </div>
